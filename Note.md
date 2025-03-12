@@ -59,3 +59,11 @@ Lesson 4: Web3.py simple storage 3:26:36 - 3:57:10 (PYTHON DEPLOY)
 - Dùng và tra cứu document của thư viện Web3.py (https://web3py.readthedocs.io/en/stable/web3.contract.html)
 - Cách truy vấn dữ liệu từ file bytecode được deploy (lấy abi, object...)
 - Dùng Ganache để fake blockchain chạy trên local thay cho testnet
+
+Lesson 4: Web3.py simple storage 3:57:10 - 4:23:00 (PYTHON DEPLOY)
+- pip install python-dotenv để lấy value từ file .env ra ví dụ như Private key. tránh hard code trong code lỡ push lên repo 
+- dùng .gitignore để bỏ file .env ra khỏi commit
+- **ĐỂ LÀM VIỆC VỚI BLOCKCHAIN THÌ CẦN PHẢI LÀM VIỆC VỚI CONTRACT. MÀ LÀM VIỆC VỚI CONTRACT THÌ CẦN PHẢI CÓ 2 THỨ LÀ CONTRACT ADDRESS VÀ ABI**
+- **ĐỂ TẠO 1 TRANSACTION CẦN QUA 3 BƯỚC BUILD TRANSACTION, SIGN TRANSACTIOON, SEND TRANSACTION**
+- ở Python thì cũng như remix. có 2 kiểu để gọi 1 function. là call (k làm thay đổi state của value, giống như là để check value hiện tại thôi, giống function màu xanh ở remix). transact (là làm thay đổi state của value, thay đổi giá trị của value nào đó khi gọi, giống function màu vàng ở remix)
+- Cách làm việc với ganache bằng terminal k cần thông qua UI interface

@@ -67,3 +67,6 @@ Lesson 4: Web3.py simple storage 3:57:10 - 4:23:00 (PYTHON DEPLOY)
 - **ĐỂ TẠO 1 TRANSACTION CẦN QUA 3 BƯỚC BUILD TRANSACTION, SIGN TRANSACTIOON, SEND TRANSACTION**
 - ở Python thì cũng như remix. có 2 kiểu để gọi 1 function. là call (k làm thay đổi state của value, giống như là để check value hiện tại thôi, giống function màu xanh ở remix). transact (là làm thay đổi state của value, thay đổi giá trị của value nào đó khi gọi, giống function màu vàng ở remix)
 - Cách làm việc với ganache bằng terminal k cần thông qua UI interface
+
+Lesson 4: Web3.py simple storage 4:23:00 - 4:27:40 (PYTHON DEPLOY)
+- Infura lấy URL để deploy smart contract to real network kết hợp với ví metamask. trước đó dùng ganache để deploy lên blockchain local

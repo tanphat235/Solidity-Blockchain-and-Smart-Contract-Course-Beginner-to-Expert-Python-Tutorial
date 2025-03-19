@@ -70,3 +70,10 @@ Lesson 4: Web3.py simple storage 3:57:10 - 4:23:00 (PYTHON DEPLOY)
 
 Lesson 4: Web3.py simple storage 4:23:00 - 4:27:40 (PYTHON DEPLOY)
 - Infura lấy URL để deploy smart contract to real network kết hợp với ví metamask. trước đó dùng ganache để deploy lên blockchain local
+
+Lesson 5:  Brownie Simple Storage 4:27:40 - 4:36:33 (BROWNIE DEPLOY)
+- Trước đó ta deploy lên blockchain cần phải dùng Web3 và phải chỉnh đúng chainid, url, address.. thì mới deploy lên được. hoặc ta muốn interact tiếp với contract trước đó thì rất khó và nhiều thứ phải điều chỉnh. Do vậy ta cần dùng Brownie. Brownie nó gần như giống Web3 library. Brownie là 1 smart contract developement platform built based on Python. nó giúp ta tương tác dễ dàng với Blockchain thông qua Python
+- Brownie đã lỗi thời ta phải dùng ApeWorx thay thế. 
+- Cài eth-ape trước, sau đó cài plugin solidity và cài plugin foundry để cài anvil để giả lập blockchain và cung cấp accounts. anvil thay thế cho ganache. ganache hoạt động với brownie còn anvil hoạt động với apeworx
+
+

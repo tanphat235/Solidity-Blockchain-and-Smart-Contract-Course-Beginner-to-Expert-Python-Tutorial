@@ -1,1 +1,14 @@
 name: Solidity, Blockchain
+dotenv: .env # Tell ape when run script grab this enviroment variables file
+
+networks:
+  ethereum:
+    sepolia:
+      default_provider: infura
+      infura:
+        project_id: "c047b39997214417b559471d43b7325c"
+
+wallets:
+  alias: "my_account"
+  passphrase: "tanphat12"
+  private_key: ${PRIVATE_KEY}

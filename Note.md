@@ -81,3 +81,10 @@ Lesson 5:  Brownie Simple Storage 4:36:33 - 4:46:52 (APEWORX DEPLOY)
 - set private key trong .env để lấy
 - deploy contract trên apeworx. 
 - tương tác với apeworx API
+
+Lesson 5:  Brownie Simple Storage 4:46:52 - 4:53:40 (WRITE TEST FOR FUNCTION)
+- Biết được cách test các function dựa vào Apeworx
+- thêm account_test " ape accounts generate account_test"
+- test command:  ape test -s --network ethereum:local
+- test riêng 1 function: ape test -k test_updating_storage -s --network ethereum:local
+- test realtime giống như python, có thể debug từng biến: ape test -pdb -s --network ethereum:local

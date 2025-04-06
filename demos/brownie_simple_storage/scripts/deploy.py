@@ -1,9 +1,13 @@
 import os
-from ape import accounts, config, project
+from ape import accounts, config, project, networks
 from ape_accounts import import_account_from_private_key
 from dotenv import load_dotenv
 
 print("Script is running...")
+with networks.ethereum.local.use_default_provider():
+    faucet = accounts.test_accounts[0]
+    my_account = accounts.load("test_account")
+    faucet.transfer(my_account, "100 ether")
 
 
 def deploy_simple_storage():
@@ -15,8 +19,7 @@ def deploy_simple_storage():
     # private_key = os.getenv("PRIVATE_KEY")
     # account = import_account_from_private_key(alias, passphrase, private_key)
 
-    account = accounts[0]
-    account.set_autosign(True)
+    account = get_account()
     simple_storage = project.SimpleStorage.deploy(sender=account)
     print("run 1")
     stored_value = simple_storage.retrieve(sender=account)
@@ -26,6 +29,18 @@ def deploy_simple_storage():
     print("run 3")
     updated_stored_value = simple_storage.retrieve(sender=account)
     print("Updated", updated_stored_value)
+
+
+def get_account():
+    chain_id = networks.active_provider.network.chain_id
+    print("networkkkkkkkkkkkkkkkkkk", chain_id)
+    if chain_id == 1337:
+        account = accounts.load("test_account")
+    elif chain_id == 11155111:
+        account = accounts.load("my_account")
+
+    print("accounttttttttttttttt", account)
+    return account
 
 
 def main():

@@ -88,3 +88,10 @@ Lesson 5:  Brownie Simple Storage 4:46:52 - 4:53:40 (WRITE TEST FOR FUNCTION)
 - test command:  ape test -s --network ethereum:local
 - test riêng 1 function: ape test -k test_updating_storage -s --network ethereum:local
 - test realtime giống như python, có thể debug từng biến: ape test -pdb -s --network ethereum:local
+
+Lesson 5:  Brownie Simple Storage 4:53:40 - 5:06:20 (WRITE TEST FOR FUNCTION)
+- Cách lấy chain_id để so sánh khi nào dùng local chain hay testnet chain
+- Cách check lại các deployment trước đó của contract. và lấy được giá trị hiện tại của deployment đó (dùng project.SimpleStorage.deployments)
+- ape run read_value --netwwork ethereum:sepolia ( để deploy lên sepolia)
+- ape run read_value --netwwork ethereum:local ( để deploy lên local)
+- dùng (ape console) để mở console shell của apeworx. có thể tương tác trực tiếp như python shell

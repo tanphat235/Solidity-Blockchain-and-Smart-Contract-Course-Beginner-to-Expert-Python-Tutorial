@@ -7,6 +7,7 @@ networks:
       default_provider: infura
       infura:
         project_id: "c047b39997214417b559471d43b7325c"
+    gas_limit: 2000000
 
 wallets:
   alias: "my_account"

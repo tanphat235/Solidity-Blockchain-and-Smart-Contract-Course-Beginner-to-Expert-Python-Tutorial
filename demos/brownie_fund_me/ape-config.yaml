@@ -1,0 +1,48 @@
+name: Fund me
+dotenv: .env
+
+networks:
+  default: local # set default network, dont need to --network when run script anymore
+  ethereum:
+    sepolia:
+      eth_usd_price_feed: "0x694AA1769357215DE4FAC081bf1f309aDC325306"
+      default_provider: infura
+      verify: False
+      infura:
+        project_id: "c047b39997214417b559471d43b7325c"
+    local:
+      verify: False
+
+# NOTE: Create dependencies but when deploying to sepolia and publishing code with publish=True, Etherscan cannot read the AggregatorV3Interface.sol file using dependencies
+# Haven't found a solution to this problem yet so create the AggregatorV3Interface.sol file in the directory and import it directly without using dependencies
+# dependencies:
+#   - name: chainlink
+#     github: smartcontractkit/chainlink
+#     version: 2.22.0
+# contracts_folder: contracts
+
+compiler:
+  solc:
+    optimizer:
+      enabled: true
+      runs: 200
+    # remappings:
+    #   - "@chainlink=contracts/.cache/chainlink/2.22.0/contracts"
+
+dependencies:
+  - name: chainlink
+    github: smartcontractkit/chainlink
+    version: 2.22.0
+contracts_folder: contracts
+etherscan:
+  additional_source_dirs:
+    - "contracts"
+
+verify:
+  etherscan:
+    flatten: true
+
+wallets:
+  alias: "my_account"
+  passphrase: "tanphat12"
+  private_key: ${PRIVATE_KEY}
